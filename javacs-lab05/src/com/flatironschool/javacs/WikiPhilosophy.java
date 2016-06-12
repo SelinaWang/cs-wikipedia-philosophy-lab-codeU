@@ -111,6 +111,9 @@ public class WikiPhilosophy {
 		if (!node.tagName().equals("a")) {
 			return null;
 		}
+		if (Character.isUpperCase(node.text().charAt(0))) {
+			return null;
+		}
 		if (!node.attr("href").startsWith("/wiki/")){
 			return null;
 		}
